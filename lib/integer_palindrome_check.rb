@@ -40,13 +40,13 @@ def is_palindrome(number)
       number = number * -1
     end
     odd = odd_digits?(number_length)
-    begin_number = number / 10 ** (number_length / 2)
+    begin_number_string = (number / 10 ** (number_length / 2)).to_s
     if odd
-      end_string = (number % 10 ** ((number_length / 2) - 1)).to_s
+      end_number = (number % 10 ** ((number_length / 2) - 1))
     else
-      end_string = (number % 10 ** (number_length / 2)).to_s
+      end_number = (number % 10 ** (number_length / 2))
     end
-    end_number = (string_reverse(end_string)).to_i
+    begin_number = (string_reverse(begin_number_string)).to_i
     if begin_number - end_number == 0
       return true
     else
