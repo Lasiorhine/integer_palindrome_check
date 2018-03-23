@@ -1,6 +1,11 @@
+require 'minitest/skip_dsl'
 require 'minitest/autorun'
 require 'minitest/reporters'
+require 'pry'
+
 require_relative '../lib/integer_palindrome_check'
+
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 describe "integer palindrome check" do
   describe "basic tests" do
