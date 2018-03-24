@@ -25,11 +25,11 @@ end
   Time complexity: No loops, just a couple of arithmetical operations, so time complexity is constant, or O(1)
 =end
 def odd?(number)
-  odd = false
   if number > (2 * (number / 2))
-    odd = true
+    return true
+  else
+    return false
   end
-  return odd
 end
 
 
